@@ -6,6 +6,7 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
 import { RequestTimeMiddleware } from './middleware/request-time.middleware';
 import { SecurityMiddleware } from './middleware/security.middleware';
 import { PrismaModule } from './prisma/prisma.module';
+import { ProjectsModule } from './projects/projects.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { PrismaModule } from './prisma/prisma.module';
     }),
     PrismaModule,
     AuthModule,
+    ProjectsModule,
   ],
   controllers: [AppController],
 })

@@ -32,14 +32,14 @@ export class AuthService {
 
     const nuevoUsuario = await this.prismaService.user.create({
       data: {
-        nombre: registerDto.nombre,
+        name: registerDto.name,
         email: registerDto.email,
         password: passwordHasheada,
         role: 'user',
       },
       select: {
         id: true,
-        nombre: true,
+        name: true,
         email: true,
         role: true,
       },
@@ -82,7 +82,7 @@ export class AuthService {
 
     return {
       id: usuarioEncontrado.id,
-      nombre: usuarioEncontrado.nombre,
+      name: usuarioEncontrado.name,
       email: usuarioEncontrado.email,
       role: usuarioEncontrado.role,
     };
@@ -116,7 +116,7 @@ export class AuthService {
       },
       select: {
         id: true,
-        nombre: true,
+        name: true,
         email: true,
         role: true,
         createdAt: true,
