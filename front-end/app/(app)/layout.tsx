@@ -38,7 +38,7 @@ export default function AppLayout({
         <Sidebar />
 
         <main className="flex-1 p-8">
-          <div className="min-h-[500px] rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="min-h-125 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             {children}
           </div>
         </main>
